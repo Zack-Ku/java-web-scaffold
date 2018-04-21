@@ -77,3 +77,5 @@ hs_err_pid*
 .idea
 .gradle/
 *.iml
+
+*/out/
