@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
-    username: root
-    password: zack2go
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
-#    database: 0
