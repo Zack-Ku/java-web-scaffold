@@ -17,15 +17,12 @@ buildscript {
 
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
-apply plugin: 'war'
 
-archivesBaseName = 'api'
+archivesBaseName = 'web-service'
 
 dependencies {
-    compile project(':service')
-
-    // spring boot
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.projectlombok:lombok')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compileOnly('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
+    runtime('mysql:mysql-connector-java')
 }

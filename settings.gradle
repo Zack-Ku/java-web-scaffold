@@ -16,4 +16,4 @@ include 'services:webservice'
 */
 
 rootProject.name = 'rest-web-sb'
-include 'api','service';
+include 'web-api','web-service';
