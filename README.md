@@ -1,5 +1,5 @@
 # rest-web
-基于Spring boot，用于快速开发的脚手架
+基于SpringBoot的rest web基础脚手架，实现java工程快速开发
 
 ## 脚手架包含功能
 1. Rest web框架
