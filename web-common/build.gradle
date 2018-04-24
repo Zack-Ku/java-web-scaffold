@@ -17,15 +17,10 @@ buildscript {
 
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
-apply plugin: 'war'
 
-archivesBaseName = 'web-api'
+archivesBaseName = 'web-common'
 
 dependencies {
-    compile project(':web-service')
-
-    // spring boot
-    compile('org.springframework.boot:spring-boot-starter-web')
-
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('org.springframework.boot:spring-boot-starter-logging')
+    compile('org.springframework.boot:spring-boot-starter-data-redis')
 }

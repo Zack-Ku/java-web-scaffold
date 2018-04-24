@@ -78,6 +78,7 @@ hs_err_pid*
 .gradle/
 *.iml
 */out/
+**rebel.xml
 
 # 防止配置泄露，屏蔽配置文件
 /web-api/src/main/resources/application.yml

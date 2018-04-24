@@ -25,4 +25,11 @@ public class GreetingController {
         Greeting greeting = greetingService.createGreet(name);
         return greeting;
     }
+
+    @RequestMapping("/greeting/find")
+    public Greeting findOne(@RequestParam(value = "id") Long id) {
+        Greeting greeting = greetingService.findGreat(id);
+        return greeting;
+    }
+
 }
