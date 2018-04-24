@@ -16,13 +16,18 @@ public interface GreetingMapper {
             id = "greeting",
             value = {
                     @Result(property = "id", column = "id", javaType = Long.class),
-                    @Result(property = "content", column = "content")
+                    @Result(property = "content", column = "content"),
+                    @Result(property = "createdBy",column = "created_by"),
+                    @Result(property = "createdDate",column = "created_date"),
+                    @Result(property = "lastModifiedBy",column = "last_modified_by"),
+                    @Result(property = "lastModifiedDate",column = "last_modified_date")
             }
     )
     @Select("select * from greeting where id=#{id}")
     Greeting findOne(@Param("id") Long id);
 
-    @Insert("insert into greeting (content) values(#{content})")
+    @Insert("insert into greeting (content,created_by,created_date,last_modified_by,last_modified_date) " +
+            "values(#{content},'system',now(),'system',now())")
     @SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "id", before = false, resultType = Long.class)
     Long insert(Greeting greeting);
 }
