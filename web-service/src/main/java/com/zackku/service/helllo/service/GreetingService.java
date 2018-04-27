@@ -10,6 +10,8 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author Zack
  * @date 2018/4/21
@@ -39,5 +41,10 @@ public class GreetingService {
     public Greeting findGreat(Long id) {
         Greeting greeting = greetingMapper.findOne(id);
         return greeting;
+    }
+
+    public List<Greeting> findGreats(String content) {
+        List<Greeting> greets = greetingMapper.find(content);
+        return greets;
     }
 }

@@ -1,11 +1,13 @@
+server:
+  port: 8999
 spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: root
-    password:
+    password: zack2go
 logging:
   level:
-    root: INFO
+    root: DEBUG
   logging.file: rest-web.log
 
 redis:

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author Zack
  * @date 2018/4/21
@@ -30,6 +32,12 @@ public class GreetingController {
     public Greeting findOne(@RequestParam(value = "id") Long id) {
         Greeting greeting = greetingService.findGreat(id);
         return greeting;
+    }
+
+    @RequestMapping("/greeting/findList")
+    public List<Greeting> find(@RequestParam(value = "content") String content) {
+        List<Greeting> greets = greetingService.findGreats(content);
+        return greets;
     }
 
 }

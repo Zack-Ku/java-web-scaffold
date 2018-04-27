@@ -6,6 +6,8 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * @author Zack
  * @date 2018/4/21
@@ -30,4 +32,8 @@ public interface GreetingMapper {
             "values(#{content},'system',now(),'system',now())")
     @SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "id", before = false, resultType = Long.class)
     Long insert(Greeting greeting);
+
+    @Select("select * from greeting where content=#{content}")
+    @ResultMap("greeting")
+    List<Greeting> find(String content);
 }
