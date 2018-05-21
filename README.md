@@ -14,6 +14,7 @@ TO BE CONTINUE...
 8. Mybatis代码生成
 9. model标准化（AbstractEntity）
 10. jackJson序列化
+11. Mockito 测试框架
 
 ## TODO
 1. rabbitMQ
@@ -21,6 +22,6 @@ TO BE CONTINUE...
 3. 统一response
 4. 日志切割
 5. GRPC
-6. 定时任务
+6. 定时任务quartz
 7. 缓存改造，时间失效
 8. mongodb

@@ -19,10 +19,10 @@ public interface GreetingMapper {
             value = {
                     @Result(property = "id", column = "id", javaType = Long.class),
                     @Result(property = "content", column = "content"),
-                    @Result(property = "createdBy",column = "created_by"),
-                    @Result(property = "createdDate",column = "created_date"),
-                    @Result(property = "lastModifiedBy",column = "last_modified_by"),
-                    @Result(property = "lastModifiedDate",column = "last_modified_date")
+                    @Result(property = "createdBy", column = "created_by"),
+                    @Result(property = "createdDate", column = "created_date"),
+                    @Result(property = "lastModifiedBy", column = "last_modified_by"),
+                    @Result(property = "lastModifiedDate", column = "last_modified_date")
             }
     )
     @Select("select * from greeting where id=#{id}")
@@ -33,7 +33,7 @@ public interface GreetingMapper {
     @SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "id", before = false, resultType = Long.class)
     Long insert(Greeting greeting);
 
-    @Select("select * from greeting where content=#{content}")
+    @Select("select * from greeting where content=#{content} limit #{offset},#{rows}")
     @ResultMap("greeting")
-    List<Greeting> find(String content);
+    List<Greeting> find(@Param("content") String content, @Param("offset") Integer offset, @Param("rows") Integer rows);
 }

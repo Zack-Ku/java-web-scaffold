@@ -10,7 +10,6 @@ import java.io.Serializable;
  * @date 2018/4/21
  */
 @Data
-
 public class Greeting extends AbstractAuditableEntity<Greeting, Long> {
     private String content;
 }

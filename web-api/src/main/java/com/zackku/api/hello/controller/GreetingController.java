@@ -35,8 +35,10 @@ public class GreetingController {
     }
 
     @RequestMapping("/greeting/findList")
-    public List<Greeting> find(@RequestParam(value = "content") String content) {
-        List<Greeting> greets = greetingService.findGreats(content);
+    public List<Greeting> find(@RequestParam(value = "content") String content,
+                               @RequestParam(value = "offset", defaultValue = "0") Integer offset,
+                               @RequestParam(value = "rows", defaultValue = "2") Integer rows) {
+        List<Greeting> greets = greetingService.findGreats(content, offset, rows);
         return greets;
     }
 
