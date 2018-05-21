@@ -1,4 +1,4 @@
-# 外包神器
+# Java web 项目脚手架
 基于SpringBoot的rest web基础脚手架，实现java工程快速开发。适用于各种外包项目，拿起就用
 
 ## 使用教程
