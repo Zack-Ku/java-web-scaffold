@@ -15,6 +15,7 @@ TO BE CONTINUE...
 9. model标准化（AbstractEntity）
 10. jackJson序列化
 11. Mockito 测试框架
+12. Actuator 监控
 
 ## TODO
 1. rabbitMQ

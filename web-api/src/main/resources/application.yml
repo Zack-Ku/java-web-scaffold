@@ -1,3 +1,18 @@
+## -------------Actuator--------------
+info:
+  app:
+    name: spring-web-scaffold
+    version: 1.2.8
+management:
+#  endpoint:
+#    beans:
+#      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+## -----------------------------------
+
 server:
   port: 8999
   address: 127.0.0.1
