@@ -1,5 +1,6 @@
 package com.zackku.api;
 
+import com.zackku.common.core.MapperInterface;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2018/4/21
  */
 @ComponentScan(basePackages = {"com.zackku"})
-@MapperScan("com.zackku")
+@MapperScan(basePackages = {"com.zackku.service"}, markerInterface = MapperInterface.class)
 @EnableAutoConfiguration
 @EnableCaching
 public class ApiApplication extends SpringBootServletInitializer {

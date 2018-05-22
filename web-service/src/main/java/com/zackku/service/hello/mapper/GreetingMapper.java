@@ -1,9 +1,8 @@
-package com.zackku.service.helllo.mapper;
+package com.zackku.service.hello.mapper;
 
-import com.zackku.service.helllo.domain.Greeting;
+import com.zackku.common.core.MapperInterface;
+import com.zackku.service.hello.domain.Greeting;
 import org.apache.ibatis.annotations.*;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,8 +11,7 @@ import java.util.List;
  * @author Zack
  * @date 2018/4/21
  */
-@Component
-public interface GreetingMapper {
+public interface GreetingMapper extends MapperInterface {
     @Results(
             id = "greeting",
             value = {

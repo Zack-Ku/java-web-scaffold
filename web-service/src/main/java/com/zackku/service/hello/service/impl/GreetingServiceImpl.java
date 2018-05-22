@@ -1,9 +1,9 @@
-package com.zackku.service.helllo.service.impl;
+package com.zackku.service.hello.service.impl;
 
 import com.zackku.common.LogUtil;
-import com.zackku.service.helllo.domain.Greeting;
-import com.zackku.service.helllo.mapper.GreetingMapper;
-import com.zackku.service.helllo.service.GreetingService;
+import com.zackku.service.hello.domain.Greeting;
+import com.zackku.service.hello.mapper.GreetingMapper;
+import com.zackku.service.hello.service.GreetingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,10 +1,9 @@
 package greet;
 
 import com.zackku.common.LogUtil;
-import com.zackku.service.helllo.domain.Greeting;
-import com.zackku.service.helllo.mapper.GreetingMapper;
-import com.zackku.service.helllo.service.GreetingService;
-import com.zackku.service.helllo.service.impl.GreetingServiceImpl;
+import com.zackku.service.hello.domain.Greeting;
+import com.zackku.service.hello.mapper.GreetingMapper;
+import com.zackku.service.hello.service.impl.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
