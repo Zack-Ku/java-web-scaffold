@@ -1,8 +1,6 @@
 # Java web 项目脚手架
 基于SpringBoot的rest web基础脚手架，实现java工程快速开发。适用于各种外包项目，拿起就用
 
-## 使用教程
-TO BE CONTINUE...
 ## Feature
 1. Rest web框架
 2. 多模块解耦(api,service,common,consumer等)
@@ -26,3 +24,6 @@ TO BE CONTINUE...
 6. 定时任务quartz
 7. 缓存改造，时间失效
 8. mongodb
+
+## 使用教程
+TO BE CONTINUE...
