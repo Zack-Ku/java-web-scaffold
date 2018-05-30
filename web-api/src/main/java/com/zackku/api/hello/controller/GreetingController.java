@@ -1,5 +1,6 @@
 package com.zackku.api.hello.controller;
 
+import com.zackku.common.core.Response;
 import com.zackku.service.hello.domain.Greeting;
 import com.zackku.service.hello.service.GreetingService;
 import org.slf4j.Logger;
@@ -27,23 +28,23 @@ public class GreetingController {
     }
 
     @RequestMapping("")
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+    public Response<Greeting> greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         Greeting greeting = greetingService.createGreet(name);
-        return greeting;
+        return new Response<>(greeting);
     }
 
     @RequestMapping("/find")
-    public Greeting findOne(@RequestParam(value = "id") Long id) {
+    public Response<Greeting> findOne(@RequestParam(value = "id") Long id) {
         Greeting greeting = greetingService.findGreat(id);
-        return greeting;
+        return new Response<>(greeting);
     }
 
     @RequestMapping("/findList")
-    public List<Greeting> find(@RequestParam(value = "content") String content,
-                               @RequestParam(value = "offset", defaultValue = "0") Integer offset,
-                               @RequestParam(value = "rows", defaultValue = "2") Integer rows) {
+    public Response<List<Greeting>> find(@RequestParam(value = "content") String content,
+                                         @RequestParam(value = "offset", defaultValue = "0") Integer offset,
+                                         @RequestParam(value = "rows", defaultValue = "2") Integer rows) {
         List<Greeting> greets = greetingService.findGreats(content, offset, rows);
-        return greets;
+        return new Response<>(greets);
     }
 
 }

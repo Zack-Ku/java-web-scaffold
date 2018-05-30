@@ -23,7 +23,7 @@ spring:
     password: zack2go
 logging:
   level:
-    root: INFO
+    root: DEBUG
   logging.file: rest-web.log
 
 redis:
