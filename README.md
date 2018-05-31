@@ -20,12 +20,13 @@
 1. rabbitMQ
 2. profile控制/Spring config 接入
 4. 日志切割
-5. GRPC
+5. GRPC-netty
 6. 定时任务quartz
 7. 缓存改造，时间失效
 8. mongodb
 9. 打war包
 10. 主从库配置，读写分离
+11. druid
 
 
 ## 使用教程
