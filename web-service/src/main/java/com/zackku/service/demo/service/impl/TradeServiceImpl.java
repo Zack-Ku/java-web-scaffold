@@ -32,8 +32,8 @@ public class TradeServiceImpl implements TradeService {
 
     public void insertBidAndOffer() {
         insertBid();
-        throw new RuntimeException();
-//        insertOffer();
+//        throw new RuntimeException();
+        insertOffer();
     }
 
     private Bid insertBid() {

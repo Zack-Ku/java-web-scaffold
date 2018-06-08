@@ -27,5 +27,8 @@ dependencies {
     // spring boot
     compile('org.springframework.boot:spring-boot-starter-web')
 
+    compile group: 'com.dangdang', name: 'elastic-job-lite-spring', version: '2.1.5'
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
 }

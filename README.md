@@ -15,13 +15,13 @@
 11. Mockito 测试框架
 12. Actuator 监控
 13. 统一Response格式
+14. 定时任务elastic job
 
 ## TODO
 1. rabbitMQ
 2. profile控制/Spring config 接入
 4. 日志切割
 5. GRPC-netty
-6. 定时任务quartz
 7. 缓存改造，时间失效
 8. mongodb
 9. 打war包
